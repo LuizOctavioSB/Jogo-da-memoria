@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Memoria</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/3132/3132772.svg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/card.css" />
+  <link rel="stylesheet" href="styles/win.css" /><!--Estilo da tela de vitória-->
+</head>
+
+<body>
+  <header>
+    <h1>JOGO DA MEMÓRIA BOB ESPONJA</h1>
+  </header>
+  <!--Tela de vitória-->
+  <div id="vitoria">
+    <div id="container">
+      <h1>Parabéns!</h1>
+      <p>Você encontrou todos os pares!</p>
+      <p id="pontuacao"></p>
+      <a href="index.html">Jogar denovo</a>
+    </div>
+  </div>
+
+  <main>
+    <section id="esq">
+      <a href="index.html">Reiniciar</a>
+      <!-- <button id="btn-reiniciar">Reiniciar</button> -->
+      <button id="btn-regras">Regras</button>
+      <span id="score">0</span><!--Campo para exibir a pontuação atual-->
+    </section>
+
+    <div id="regras">
+      <h2>Regras do Jogo da Memória</h2>
+      <p>Escolha duas cartas para ver se elas combinam. Se combinarem, você ganha 10 pontos e as cartas permanecem
+        viradas.
+        Se não combinarem, você perde 5 pontos e as cartas são viradas de volta.</p>
+      <p>Ganhe pontos combinando todas as cartas o mais rápido possível!</p>
+    </div>
+
+    <section class="jogo">
+      <div class="card" data-nome="bob">
+        <img class="frente" src="Midias/BobEsponja.jpg" alt="card">
+        <img class="verso" src="Midias/Verso.jpg" alt="card">
+      </div>
+      <div class="card" data-nome="bob">
+        <img class="frente" src="Midias/BobEsponja.jpg" alt="card">
+        <img class="verso" src="Midias/Verso.jpg" alt="card">
+      </div>
+      <div class="card" data-nome="patrick">
+        <img class="frente" src="Midias/PatrickBombado.jpg" alt="card" />
+        <img class="verso" src="Midias/Verso.jpg" alt="card" />
+      </div>
+      <div class="card" data-nome="patrick">
+        <img class="frente" src="Midias/PatrickBombado.jpg" alt="card" />
+        <img class="verso" src="Midias/Verso.jpg" alt="card" />
+      </div>
+      <div class="card" data-nome="plank">
+        <img class="frente" src="Midias/Plankton.jpg" alt="card" />
+        <img class="verso" src="Midias/Verso.jpg" alt="card" />
+      </div>
+      <div class="card" data-nome="plank">
+        <img class="frente" src="Midias/Plankton.jpg" alt="card" />
+        <img class="verso" src="Midias/Verso.jpg" alt="card" />
+      </div>
+      <div class="card" data-nome="burger">
+        <img class="frente" src="Midias/Hamburguer.jpg" alt="card" />
+        <img class="verso" src="Midias/Verso.jpg" alt="card" />
+      </div>
+      <div class="card" data-nome="burger">
+        <img class="frente" src="Midias/Hamburguer.jpg" alt="card" />
+        <img class="verso" src="Midias/Verso.jpg" alt="card" />
+      </div>
+    </section>
+    <section id="dir"></section>
+  </main>
+  <footer>
+    <p>Produzido por Luiz Octávio e Lucas Manzato</p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>

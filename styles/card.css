@@ -1,0 +1,86 @@
+.jogo .card {
+  padding: 30px;
+  margin: 15px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17vw;
+  height: 160px;
+  border-radius: 0px 30px 0px 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.jogo {
+  align-items: center;
+  padding: 10px;
+  /* margin: 10px; */
+  /* top: 24px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  background-color: #3a3a3a;
+}
+
+.jogo .card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.jogo .card,
+.jogo .virado {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.jogo .card {
+  background-color: #c4c4c4;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.card.flip[data-nome="bob"],
+.card.flip[data-nome="bob"] img {
+  background-color: #faf484;
+}
+
+.card.flip[data-nome="patrick"],
+.card.flip[data-nome="patrick"] img {
+  background-color: #FA8484;
+}
+
+.card.flip[data-nome="plank"],
+.card.flip[data-nome="plank"] img {
+  background-color: #7cb07e;
+}
+
+.card.flip[data-nome="burger"],
+.card.flip[data-nome="burger"] img {
+  background-color: #d25265;
+}
+
+/* novas */
+
+.frente,
+.verso {
+  width: 100px;
+  height: 100px;
+  padding: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.frente {
+  transform: rotateY(180deg);
+}
