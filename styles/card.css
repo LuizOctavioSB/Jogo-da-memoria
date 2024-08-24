@@ -70,6 +70,16 @@
   background-color: #d25265;
 }
 
+.card.flip[data-nome="sandy"],
+.card.flip[data-nome="sandy"] img {
+  background-color: #63d6c7;
+}
+
+.card.flip[data-nome="gary"],
+.card.flip[data-nome="gary"] img {
+  background-color: #cedfb6;
+}
+
 /* novas */
 
 .frente,
